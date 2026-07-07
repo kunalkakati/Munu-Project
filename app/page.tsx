@@ -28,7 +28,7 @@ export default function HomePage() {
         <div className="grid items-center gap-10 sm:grid-cols-2 sm:gap-16">
           <div>
             <p className="font-body text-sm font-semibold uppercase tracking-[0.2em] text-brick">
-              Home-baked in Guwahati
+              Baked with love at my little kitchen
             </p>
             <h1 className="mt-4 font-display text-4xl font-semibold leading-tight text-ink sm:text-5xl">
               Cakes made the way a friend would bake them for you.
