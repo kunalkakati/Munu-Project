@@ -5,7 +5,7 @@
 export const WHATSAPP_NUMBER = "917578061661"; // TODO: replace with Namita's real number
 
 export const BUSINESS_NAME = "Namita's Little Bakehouse";
-export const LOCATION = "Haribhanga, Tihu, Assam";
+export const LOCATION = "Tihu, Assam";
 export const INSTAGRAM_HANDLE = "namitaslittlebakehouse"; // TODO: replace or remove if not used
 
 export function waLink(message: string) {
