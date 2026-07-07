@@ -5,7 +5,8 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 
 export const metadata: Metadata = {
   title: "Our Story | Namita's Little Bakehouse",
-  description: "How a one-year home-baking journey became Namita's Little Bakehouse in Guwahati.",
+  description:
+    "How a one-year home-baking journey became Namita's Little Bakehouse in Guwahati.",
 };
 
 export default function AboutPage() {
@@ -24,11 +25,11 @@ export default function AboutPage() {
 
       <div className="mt-10 space-y-5 font-body text-base leading-relaxed text-ink-soft">
         <p>
-          Namita&rsquo;s Little Bakehouse started the way most home bakeries
-          do — in a home kitchen in Guwahati, with one cake baked for a
-          family birthday. That cake led to a request from a neighbour, then
-          a friend of a friend, and a year on, it has grown into a small
-          bakery run entirely out of that same kitchen.
+          Namita&rsquo;s Little Bakehouse started the way most home bakeries do
+          — in a home kitchen in Guwahati, with one cake baked for a family
+          birthday. That cake led to a request from a neighbour, then a friend
+          of a friend, and a year on, it has grown into a small bakery run
+          entirely out of that same kitchen.
         </p>
         <p>
           Namita bakes everything herself, from the classic 0.5&nbsp;kg and
@@ -37,17 +38,15 @@ export default function AboutPage() {
           with the same care as a cake for a hundred guests.
         </p>
         <p>
-          There&rsquo;s no shop front and no large team — just Namita, her
-          oven, and a phone that&rsquo;s always open for an order. She
-          believes a cake made for a birthday, an anniversary, or just
-          because, should taste like it was made by someone who cares — not
-          off a factory line.
+          There&rsquo;s no shop front and no large team — just Namita, her oven,
+          and a phone that&rsquo;s always open for an order. She believes a cake
+          made for a birthday, an anniversary, or just because, should taste
+          like it was made by someone who cares — not off a factory line.
         </p>
         <p>
-          One year in, the bakery is still small by design. Every order is
-          taken personally over WhatsApp, so Namita can talk through
-          flavours, sizes, and designs directly with the person she&rsquo;s
-          baking for.
+          One year in, the bakery is still small by design. Every order is taken
+          personally over WhatsApp, so Namita can talk through flavours, sizes,
+          and designs directly with the person she&rsquo;s baking for.
         </p>
       </div>
 
@@ -58,11 +57,18 @@ export default function AboutPage() {
           Have a cake in mind?
         </h2>
         <p className="mx-auto mt-2 max-w-sm font-body text-sm leading-relaxed text-ink-soft">
-          Namita would love to hear about the occasion you&rsquo;re baking
-          for.
+          Namita would love to hear about the occasion you&rsquo;re baking for.
         </p>
-        <div className="mt-5 flex justify-center">
+        <div className="mt-5 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
           <WhatsAppButton variant="inline" label="Say hello on WhatsApp" />
+          <a
+            href="https://www.instagram.com/namita_kakati608/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="focus-ring rounded-soft border border-gold px-6 py-2 font-body text-sm font-semibold uppercase tracking-wide text-gold transition-colors hover:bg-gold hover:text-paper"
+          >
+            Follow on Instagram
+          </a>
         </div>
       </div>
     </div>

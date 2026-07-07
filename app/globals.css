@@ -1,19 +1,19 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: #F7F1E2;
-  color: #2E211A;
+  background-color: #f7f1e2;
+  color: #2e211a;
 }
 
 ::selection {
-  background-color: #A13D2D;
-  color: #FFFDF7;
+  background-color: #a13d2d;
+  color: #fffdf7;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -28,6 +28,6 @@ body {
 }
 
 .focus-ring:focus-visible {
-  outline: 2px solid #A13D2D;
+  outline: 2px solid #a13d2d;
   outline-offset: 3px;
 }
