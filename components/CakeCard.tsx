@@ -13,18 +13,18 @@ export default function CakeCard({ cake }: { cake: Cake }) {
   const message = `Hi Namita! I'd like to order the ${cake.name}. Could you tell me more about sizes and availability?`;
 
   return (
-    <div className="group flex flex-col overflow-hidden rounded-soft border border-ink/10 bg-paper transition-shadow hover:shadow-md">
-      <div className="aspect-square w-full overflow-hidden bg-cream">
+    <div className="group flex h-full flex-col overflow-hidden rounded-soft border border-ink/10 bg-paper transition-shadow duration-200 hover:shadow-lg focus-within:shadow-lg">
+      <div className="aspect-square w-full flex-shrink-0 overflow-hidden bg-cream">
         <CakeIllustration variant={cake.variant} className="h-full w-full" />
       </div>
-      <div className="flex flex-1 flex-col p-5">
-        <h3 className="font-display text-lg font-semibold text-ink">
+      <div className="flex flex-1 flex-col p-4 sm:p-5 md:p-6">
+        <h3 className="font-display text-base font-semibold text-ink sm:text-lg md:text-xl">
           {cake.name}
         </h3>
-        <p className="mt-1.5 flex-1 font-body text-sm leading-relaxed text-ink-soft">
+        <p className="mt-2 flex-1 font-body text-xs leading-relaxed text-ink-soft sm:text-sm md:mt-2.5">
           {cake.description}
         </p>
-        <ul className="mt-4 space-y-1 font-body text-sm text-ink">
+        <ul className="mt-3 space-y-1 font-body text-xs text-ink sm:mt-4 sm:text-sm">
           {cake.sizes.map((s) => (
             <li
               key={s.label}
@@ -39,7 +39,7 @@ export default function CakeCard({ cake }: { cake: Cake }) {
           href={waLink(message)}
           target="_blank"
           rel="noopener noreferrer"
-          className="focus-ring mt-4 inline-flex items-center justify-center rounded-soft border border-brick px-4 py-2 font-body text-sm font-semibold uppercase tracking-wide text-brick transition-colors hover:bg-brick hover:text-paper"
+          className="focus-ring mt-3 w-full rounded-soft border border-brick px-3 py-2.5 font-body text-xs font-semibold uppercase tracking-wide text-brick transition-all duration-200 hover:bg-brick hover:text-paper focus:outline-none active:scale-95 sm:mt-4 sm:px-4 sm:py-3 sm:text-sm md:mt-5"
         >
           Enquire on WhatsApp
         </a>

@@ -66,24 +66,30 @@ export default function HomePage() {
       <section className="mx-auto max-w-5xl px-5 py-16 sm:px-8">
         <div className="grid gap-8 sm:grid-cols-3">
           <div>
-            <p className="font-display text-2xl font-semibold text-brick">Baked fresh</p>
+            <p className="font-display text-2xl font-semibold text-brick">
+              Baked fresh
+            </p>
             <p className="mt-2 font-body text-sm leading-relaxed text-ink-soft">
               Every order is baked after you confirm it — nothing sits on a
               shelf waiting to be sold.
             </p>
           </div>
           <div>
-            <p className="font-display text-2xl font-semibold text-brick">Made to order</p>
+            <p className="font-display text-2xl font-semibold text-brick">
+              Made to order
+            </p>
             <p className="mt-2 font-body text-sm leading-relaxed text-ink-soft">
               Choose your size and flavour, and tell us about the occasion —
               we'll bake around it.
             </p>
           </div>
           <div>
-            <p className="font-display text-2xl font-semibold text-brick">A personal touch</p>
+            <p className="font-display text-2xl font-semibold text-brick">
+              A personal touch
+            </p>
             <p className="mt-2 font-body text-sm leading-relaxed text-ink-soft">
-              You're talking to Namita directly, not a call centre — every
-              order gets her attention.
+              You're talking to Namita directly, not a call centre — every order
+              gets her attention.
             </p>
           </div>
         </div>
@@ -103,7 +109,7 @@ export default function HomePage() {
               Full menu &rarr;
             </Link>
           </div>
-          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {cakes.map((cake) => (
               <CakeCard key={cake.name} cake={cake} />
             ))}
@@ -128,8 +134,12 @@ export default function HomePage() {
               <p className="font-display text-4xl font-semibold text-gold">
                 {String(i + 1).padStart(2, "0")}
               </p>
-              <p className="mt-3 font-display text-lg font-semibold text-ink">{step.title}</p>
-              <p className="mt-2 font-body text-sm leading-relaxed text-ink-soft">{step.body}</p>
+              <p className="mt-3 font-display text-lg font-semibold text-ink">
+                {step.title}
+              </p>
+              <p className="mt-2 font-body text-sm leading-relaxed text-ink-soft">
+                {step.body}
+              </p>
             </div>
           ))}
         </div>
