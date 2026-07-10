@@ -1,6 +1,9 @@
+"use client";
+
+import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import CakeCard from "@/components/CakeCard";
-import CakeIllustration from "@/components/CakeIllustration";
 import GamosaBorder from "@/components/GamosaBorder";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { cakes } from "@/lib/cakes";
@@ -20,7 +23,35 @@ const steps = [
   },
 ];
 
+const heroImages = [
+  { src: "/cakes/cake1.jpeg", label: "Bento Cake" },
+  { src: "/cakes/cake2.jpeg", label: "Classic Cake" },
+  { src: "/cakes/cake3.jpeg", label: "Jar Cake" },
+  { src: "/cakes/cake4.jpeg", label: "Special Celebration" },
+  { src: "/cakes/cake5.jpeg", label: "Freshly Baked" },
+  { src: "/cakes/cake6.jpeg", label: "Custom Design" },
+  { src: "/cakes/cake7.jpeg", label: "Sweet Surprise" },
+  { src: "/cakes/cake8.jpeg", label: "Mini Treat" },
+];
+
 export default function HomePage() {
+  const [activeImage, setActiveImage] = useState(0);
+  const [isFading, setIsFading] = useState(false);
+
+  useEffect(() => {
+    const interval = window.setInterval(() => {
+      setIsFading(true);
+      window.setTimeout(() => {
+        setActiveImage((current) => (current + 1) % heroImages.length);
+        setIsFading(false);
+      }, 600);
+    }, 5000);
+
+    return () => window.clearInterval(interval);
+  }, []);
+
+  const currentHeroImage = heroImages[activeImage];
+
   return (
     <div>
       {/* Hero */}
@@ -51,10 +82,18 @@ export default function HomePage() {
           </div>
           <div className="relative mx-auto w-full max-w-sm">
             <div className="overflow-hidden rounded-soft border border-ink/10 bg-paper shadow-sm">
-              <CakeIllustration variant="bento" className="h-full w-full" />
+              <div className="relative aspect-[4/5] w-full">
+                <Image
+                  src={currentHeroImage.src}
+                  alt={currentHeroImage.label}
+                  fill
+                  priority
+                  className={`object-cover transition-opacity duration-1000 ${isFading ? "opacity-0" : "opacity-100"}`}
+                />
+              </div>
             </div>
             <div className="absolute -bottom-4 -left-4 rounded-soft bg-brick px-4 py-2 font-display text-sm font-semibold text-paper shadow-md sm:-left-8">
-              This week&rsquo;s favourite: Bento Cake
+              {currentHeroImage.label}
             </div>
           </div>
         </div>
