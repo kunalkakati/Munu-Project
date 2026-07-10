@@ -25,6 +25,9 @@ export default function Header() {
           <Link href="/cakes" className="focus-ring hover:text-brick">
             Cakes
           </Link>
+          <Link href="/gallery" className="focus-ring hover:text-brick">
+            Gallery
+          </Link>
           <Link href="/about" className="focus-ring hover:text-brick">
             About
           </Link>
@@ -37,6 +40,9 @@ export default function Header() {
         <nav className="flex items-center gap-5 font-body text-sm font-medium uppercase tracking-wide text-ink-soft sm:hidden">
           <Link href="/cakes" className="focus-ring hover:text-brick">
             Cakes
+          </Link>
+          <Link href="/gallery" className="focus-ring hover:text-brick">
+            Gallery
           </Link>
           <Link href="/about" className="focus-ring hover:text-brick">
             About
