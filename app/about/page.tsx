@@ -26,7 +26,7 @@ export default function AboutPage() {
       <div className="mt-10 space-y-5 font-body text-base leading-relaxed text-ink-soft">
         <p>
           Namita&rsquo;s Little Bakehouse started the way most home bakeries do
-          — in a home kitchen in Guwahati, with one cake baked for a family
+          — in a home kitchen in Tihu, with one cake baked for a family
           birthday. That cake led to a request from a neighbour, then a friend
           of a friend, and a year on, it has grown into a small bakery run
           entirely out of that same kitchen.

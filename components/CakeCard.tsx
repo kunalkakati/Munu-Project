@@ -1,4 +1,4 @@
-import CakeIllustration from "./CakeIllustration";
+import Image from "next/image";
 import WhatsAppButton from "./WhatsAppButton";
 import { waLink } from "@/lib/config";
 
@@ -6,6 +6,7 @@ export type Cake = {
   name: string;
   description: string;
   variant: "bento" | "classic" | "jar";
+  image: string;
   sizes: { label: string; price: string }[];
 };
 
@@ -15,7 +16,13 @@ export default function CakeCard({ cake }: { cake: Cake }) {
   return (
     <div className="group flex h-full flex-col overflow-hidden rounded-soft border border-ink/10 bg-paper transition-shadow duration-200 hover:shadow-lg focus-within:shadow-lg">
       <div className="aspect-square w-full flex-shrink-0 overflow-hidden bg-cream">
-        <CakeIllustration variant={cake.variant} className="h-full w-full" />
+        <Image
+          src={cake.image}
+          alt={cake.name}
+          width={800}
+          height={800}
+          className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+        />
       </div>
       <div className="flex flex-1 flex-col p-4 sm:p-5 md:p-6">
         <h3 className="font-display text-base font-semibold text-ink sm:text-lg md:text-xl">

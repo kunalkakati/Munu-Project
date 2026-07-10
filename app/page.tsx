@@ -16,7 +16,7 @@ const steps = [
   },
   {
     title: "Pick up or get it delivered",
-    body: "Collect fresh from the kitchen, or arrange delivery within Guwahati.",
+    body: "Collect fresh from the kitchen, or get it delivered to your doorstep.",
   },
 ];
 
