@@ -101,6 +101,42 @@ export default function HomePage() {
 
       <GamosaBorder className="mx-auto h-3 w-full max-w-5xl px-5 text-gold sm:px-8" />
 
+      {/* Cake image gallery */}
+      <section className="mx-auto max-w-5xl px-5 py-16 sm:px-8">
+        <div className="flex items-end justify-between gap-4">
+          <div>
+            <p className="font-body text-sm font-semibold uppercase tracking-[0.2em] text-brick">
+              Gallery
+            </p>
+            <h2 className="mt-2 font-display text-2xl font-semibold text-ink sm:text-3xl">
+              A glimpse of the cakes we love to make
+            </h2>
+          </div>
+        </div>
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {heroImages.map((image) => (
+            <div
+              key={image.src}
+              className="overflow-hidden rounded-soft border border-ink/10 bg-paper shadow-sm"
+            >
+              <div className="relative aspect-[4/5] w-full">
+                <Image
+                  src={image.src}
+                  alt={image.label}
+                  fill
+                  className="object-cover transition-transform duration-300 hover:scale-105"
+                />
+              </div>
+              <div className="p-3 text-center">
+                <p className="font-body text-sm font-semibold text-ink">
+                  {image.label}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Value props */}
       <section className="mx-auto max-w-5xl px-5 py-16 sm:px-8">
         <div className="grid gap-8 sm:grid-cols-3">
